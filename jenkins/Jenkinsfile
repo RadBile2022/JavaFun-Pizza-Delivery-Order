@@ -19,9 +19,9 @@ pipeline {
         }
         stage('Deploy') { 
             steps {
-                sh './deliver.sh' 
+                sh './jenkins/deliver.sh' 
                 input message: 'Sudah selesai menggunakan Java App? (Klik "Proceed" untuk mengakhiri)' 
-                sh './kill.sh' 
+                sh './jenkins/kill.sh' 
             }
         }
            
