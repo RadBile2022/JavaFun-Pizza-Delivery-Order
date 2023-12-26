@@ -41,7 +41,11 @@ pipeline {
                 echo 'The Deploy is started, please wait'
                 sh 'chmod +x ./jenkins/scripts/deliver.sh'
                 sh './jenkins/scripts/deliver.sh'
+
+
+                echo 'Before sleep'
                 sh 'sleep 60'
+                echo 'After sleep'
                 
                 echo 'After 60 seconds will be end'
                  sh 'chmod +x ./jenkins/scripts/kill.sh'
