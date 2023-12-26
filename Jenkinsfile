@@ -17,15 +17,40 @@ pipeline {
                 }
             }
         }
-        stage('Deploy') { 
+         stage('Manual Approval') {
             steps {
-                chmod './jenkins/script/deliver.sh'
-               sh './jenkins/script/deliver.sh'
-                input message: 'Finished using the website? (Click "Proceed" to continue)'
-                chmod './jenkins/script/kill.sh'
-                sh './jenkins/script/kill.sh'
+                script {
+                    def userInput = input(
+                        message: 'Lanjutkan ke tahap Deploy?',
+                        parameters: [choice(choices: ['Yes'], description: 'Choose an option', name: 'CONTINUE')]
+                    )
+                    if (userInput == 'Yes') {
+                        echo 'Continuing with deployment...'
+                        // sh './jenkins/scripts/deliver.sh'
+                        // sh 'sleep 60'
+                        // sh './jenkins/scripts/kill.sh'
+                    } else {
+                        echo 'Deployment aborted.'
+                        sh './jenkins/scripts/kill.sh'
+                    }
+                }
             }
         }
+        stage('Deploy') {
+            steps {
+                sh './jenkins/scripts/deliver.sh'
+                sh 'sleep 60'
+            }
+        }
+        // stage('Deploy') { 
+        //     steps {
+        //         chmod './jenkins/script/deliver.sh'
+        //        sh './jenkins/script/deliver.sh'
+        //         input message: 'Finished using the website? (Click "Proceed" to continue)'
+        //         chmod './jenkins/script/kill.sh'
+        //         sh './jenkins/script/kill.sh'
+        //     }
+        // }
            
     }
 }
