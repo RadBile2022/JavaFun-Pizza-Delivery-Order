@@ -42,10 +42,10 @@ pipeline {
                 sh 'chmod +x ./jenkins/scripts/deliver.sh'
                 sh './jenkins/scripts/deliver.sh'
 
-
-                echo 'Before sleep'
-                sleep time: 60, unit: 'SECONDS'
-                echo 'After sleep'
+                
+                input message : 'sudahkah menggunakan javanya ?'
+                sh 'sleep 1m'
+               
                 
                 echo 'After 60 seconds will be end'
                  sh 'chmod +x ./jenkins/scripts/kill.sh'
