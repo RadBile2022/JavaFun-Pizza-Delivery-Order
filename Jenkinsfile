@@ -42,6 +42,10 @@ pipeline {
                 sh 'chmod +x ./jenkins/scripts/deliver.sh'
                 sh './jenkins/scripts/deliver.sh'
                 sh 'sleep 60'
+                
+                echo 'After 60 seconds will be end'
+                 sh 'chmod +x ./jenkins/scripts/kill.sh'
+                sh './jenkins/scripts/kill.sh'
             }
         }
         // stage('Deploy') { 
