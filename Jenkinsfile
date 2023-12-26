@@ -39,7 +39,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'The Deploy is started, please wait'
-                 chmod './jenkins/script/deliver.sh'
+                sh 'chmod +x ./jenkins/script/deliver.sh'
                 sh './jenkins/scripts/deliver.sh'
                 sh 'sleep 60'
             }
