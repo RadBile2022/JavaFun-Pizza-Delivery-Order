@@ -38,6 +38,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
+                input message : 'Lanjutkah menggunakan javanya ?'
                 echo 'The Deploy is started, please wait'
                 sh 'chmod +x ./jenkins/scripts/deliver.sh'
                 sh './jenkins/scripts/deliver.sh'
