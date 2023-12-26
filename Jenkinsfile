@@ -44,7 +44,7 @@ pipeline {
 
 
                 echo 'Before sleep'
-                sh 'sleep 60'
+                sleep time: 60, unit: 'SECONDS'
                 echo 'After sleep'
                 
                 echo 'After 60 seconds will be end'
