@@ -71,7 +71,7 @@
             </configuration>
         </plugin>
 		</plugins>
-		<finalName>rest-api-pdo</finalName>
+<!-- 		<finalName>rest-api-pdo</finalName> -->
 	</build>
 
 </project>
