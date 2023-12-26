@@ -38,6 +38,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
+                 chmod './jenkins/script/deliver.sh'
                 sh './jenkins/scripts/deliver.sh'
                 sh 'sleep 60'
             }
