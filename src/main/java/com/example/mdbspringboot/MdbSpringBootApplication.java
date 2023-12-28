@@ -14,6 +14,6 @@ public class MdbSpringBootApplication implements WebServerFactoryCustomizer<Conf
 	}
 	@Override
 	public void customize(ConfigurableWebServerFactory factory) {
-		factory.setPort(9090);
+		factory.setPort(9095);
 	}
 }
