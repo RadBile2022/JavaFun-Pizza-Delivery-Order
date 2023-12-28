@@ -71,7 +71,8 @@
             </configuration>
         </plugin>
 		</plugins>
-<!-- 		<finalName>rest-api-pdo</finalName> -->
+		
+		<finalName>java-pdo</finalName>
 	</build>
 
 </project>
