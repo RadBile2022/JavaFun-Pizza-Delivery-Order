@@ -6,10 +6,11 @@ Adapun User Interface Menggunakan Flutter
 https://github.com/RadBile2022/JavaFun-Pizza-Delivery-Order/tree/flutter
 
 ## JENKINS DEPLOY MANUAL JAR
-https://github.com/RadBile2022/JavaFun-Pizza-Delivery-Order/issues/2#issue-2059151348
+<img src="https://github.com/RadBile2022/JavaFun-Pizza-Delivery-Order/issues/2#issue-2059151348" width="800" align="left">
 
 ## JENKINS DEPLOY BUILD IMAGE DOCKER
-https://github.com/RadBile2022/JavaFun-Pizza-Delivery-Order/issues/2#issuecomment-1871820002
+<img src="https://github.com/RadBile2022/JavaFun-Pizza-Delivery-Order/issues/2#issuecomment-1871820002" width="800" align="left">
 
 ## IMAGE DOCKER
-https://github.com/RadBile2022/JavaFun-Pizza-Delivery-Order/issues/2#issuecomment-1871820626
+<img src="https://github.com/RadBile2022/JavaFun-Pizza-Delivery-Order/issues/2#issuecomment-1871820626" width="800" align="left">
+
